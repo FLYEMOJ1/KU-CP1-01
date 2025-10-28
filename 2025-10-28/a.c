@@ -70,32 +70,85 @@
 // }
 
 // Array 三次元排列
+// 3面 4行 5列排序定义
+// 一个面 每20个整数 以 二次元排列输出
+// 当 1面 输出完毕后 空一行
+// 整数 从11开始 以11递增
+
+// int main() {
+//     int ary[3][4][5]; // 3面 4行 5列 排序定义
+//     int i, j, k, cnt = 11; // 整数 从11开始 以11递增
+// 
+//     for (i = 0; i < 3; i++) { // 面
+//         for (j = 0; j < 4; j++) { // 行
+//             for (k = 0; k < 5; k++) { // 列
+//                 ary[i][j][k] = cnt; // 赋值
+//                 cnt ++; // 以1递增
+//             }
+//         }
+//     }
+// 
+//     for (i = 0; i < 3; i++) { // 面
+//         printf("%d면 2차원 배열\n", i + 1); // 输出 面编号
+//         for (j = 0; j < 4; j++) { // 行
+//             for (k = 0; k < 5; k++) { // 列
+//                 printf("%d", ary[i][j][k]); // 输出数组元素
+//             }
+//             printf("\n");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/// Array 실습 1 - 3차원 배열 응용 - 1
+// 3차원 배열로 2개의 면을 만들어 1면에는 정수 "1"만 출력하고 2면에는 정수 "2"만
+// 2차원 배열 4행 3열을 출력
+// 1면이 끝나면 줄 바꿈
+// 각 행의 열에는 "/t"를 이용하여 공백을 추가
+// int main() {
+//     int array[2][4][3];
+//     for (int i = 0; i<2; i++) { // 면
+//         for (int j = 0; j<4; j++) { // 행
+//             for (int k = 0; k<3; k++) { // 열
+//                 array[i][j][k] = i + 1; // 赋值
+//             }
+//         }
+//     }
+//
+//     for (int i = 0; i<2; i++) { // 면
+//         for (int j = 0; j<4; j++) { // 행 (fixed: changed back to 4)
+//             for (int k = 0; k<3; k++) { // 열
+//                 printf("%d\t", array[i][j][k]); // 输出数组元素
+//             }
+//             printf("\n");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+/// Array 실습 2 - 3차원 배열 응용 - 2
+// 3차원 배열로 2개의 면을 만들어 1면에는 정수 “0”만 출력하고 2면에는 정수 “3”만
+// 출력하는 프로그램을 코딩하시오. (조건은 아래와 같다.)
+// @ 2차원 배열 4행 3열을 출력
+// @ 1면이 끝나면 줄 바꿈
+// @ 각 행의 열에는 “/t”를 이용하여 공백을 추가
+
+
+
+// ch07 contents. Array and String
 
 int main() {
-    int ary[3][4][5]; // 3 pages, 4 rows, 5 columns
-    int i, j, k, cnt = 11;
+//     char str1[5] = { "K", "O", "R", "E", "A" };
+//     char str2[5] = { "K", "O", "R", "E", "A" }; // Garbage Value
+// 
+//     printf("str1: %s\n", str1);
+//     printf("str2: %s\n", str2);
+    char str1[] = "KOREA";
+    char* str2 = "KOREA";
 
-    for (i = 0; i < 3; i++) {
-        for (j = 0; j < 4; j++) {
-            for (k = 0; k < 5; k++) {
-                ary[i][j][k] = cnt;
-                cnt += 11;
-            }
-        }
-    }
+    printf("%d, %d", sizeof(str1), sizeof(str2));
 
-    for (i = 0; i < 3; i++) {
-        printf("%d면 2차원 배열\n", i + 1);
-        for (j = 0; j < 4; j++) {
-            for (k = 0; k < 5; k++) {
-                printf("%4d", ary[i][j][k]);
-            }
-            printf("\n");
-        }
-        printf("\n");
-    }
     return 0;
 }
-
-
-
