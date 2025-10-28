@@ -53,20 +53,49 @@
 
 
 // 二次元配列 - 韩语翻译
-int main () {
-    char word1[3][20] = { "korea univ", "oop", "os" };
-    char word2[3][30] = { "고려대학교", "객체지향프로그래밍", "운영체제" };
-    char tmp[3][20];
-    for (int i = 0; i < 3; i++) {
-        printf("문제: %s 번역하시오!\n", word1[i]);
-        scanf ("%s", tmp[i]);
+// int main () {
+//     char word1[3][20] = { "korea univ", "oop", "os" };
+//     char word2[3][30] = { "고려대학교", "객체지향프로그래밍", "운영체제" };
+//     char tmp[3][20];
+//     for (int i = 0; i < 3; i++) {
+//         printf("문제: %s 번역하시오!\n", word1[i]);
+//         scanf ("%s", tmp[i]);
+// 
+//         if (strcmp(tmp[i], word2[i]) == 0)
+//         printf("OK!\n");
+//         else
+//         printf("Fail! Correct answer: %s\n", word2[i]);
+//     }
+//     return 0;
+// }
 
-        if (strcmp(tmp[i], word2[i]) == 0)
-        printf("OK!\n");
-        else
-        printf("Fail! Correct answer: %s\n", word2[i]);
+// Array 三次元排列
+
+int main() {
+    int ary[3][4][5]; // 3 pages, 4 rows, 5 columns
+    int i, j, k, cnt = 11;
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 4; j++) {
+            for (k = 0; k < 5; k++) {
+                ary[i][j][k] = cnt;
+                cnt += 11;
+            }
+        }
+    }
+
+    for (i = 0; i < 3; i++) {
+        printf("%d면 2차원 배열\n", i + 1);
+        for (j = 0; j < 4; j++) {
+            for (k = 0; k < 5; k++) {
+                printf("%4d", ary[i][j][k]);
+            }
+            printf("\n");
+        }
+        printf("\n");
     }
     return 0;
 }
+
 
 
